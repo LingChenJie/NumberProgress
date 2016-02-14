@@ -47,7 +47,8 @@ public class NumberProgressBar extends View {
     private float mDrawTextEnd;
     private float mDrawImageStart;
     private float mDrawImageEnd;
-
+    private int mDrawableIcon;
+    
     private String mCurrentDrawText;
     private Paint mReachedBarPaint;
     private Paint mUnreachedBarPaint;
@@ -81,11 +82,12 @@ public class NumberProgressBar extends View {
 
         mReachedBarHeight = attributes.getDimension(R.styleable.NumberProgressBar_progress_reached_bar_height, 0);
         mUnreachedBarHeight = attributes.getDimension(R.styleable.NumberProgressBar_progress_unreached_bar_height, 0);
+        mDrawableIcon = attributes.getResourceId(R.styleable.NumberProgressBar_progress_icon, 0);
 
         setProgress(attributes.getInt(R.styleable.NumberProgressBar_progress_current, 0));
         setMax(attributes.getInt(R.styleable.NumberProgressBar_progress_max, 100));
 
-        mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.version_progress_bar_dot);
+        mBitmap = BitmapFactory.decodeResource(getResources(), mDrawableIcon);
         attributes.recycle();
         initializePainters();
     }
