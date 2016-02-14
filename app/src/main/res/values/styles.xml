@@ -16,7 +16,7 @@
 
         <item name="progress_unreached_color">@color/CL</item>
         <item name="progress_reached_color">@color/CB</item>
-
+        <item name="progress_icon">@drawable/version_progress_bar_dot</item>
         <item name="progress_text_size">12sp</item>
         <item name="progress_text_color">@color/CB</item>
 
