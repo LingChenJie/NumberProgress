@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
                         msg.what = 100;
                         msg.obj = mProgress;
                         myHandler.sendMessage(msg);
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
